@@ -1,0 +1,12 @@
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.custom-container {
+  max-width: 81.25%;
+  margin: 0 auto;
+}
