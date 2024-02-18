@@ -322,7 +322,7 @@
                 <div class="grid grid-cols-12 justify-between border-b-4 border-dashed pb-4">
                   <div class="col-span-4">
                     <h3 class="font-inter font-semibold text-light-black">Seat<span
-                        class="bg-[#1DD100] text-white px-2 rounded-lg ml-2">2</span></h3>
+                        class="seat-num bg-[#1DD100] text-white px-2 rounded-lg ml-2">0</span></h3>
                   </div>
                   <div class="col-span-4">
                     <h3 class="font-inter font-semibold text-light-black">Class</h3>
@@ -351,7 +351,8 @@
                     <input id="coupon-input" type="text" class="grow " placeholder="Have any coupon?" />
                   </label>
                   <button id="coupon-button"
-                    class="bg-[#1DD100] text-white px-8 py-3 rounded-lg w-full lg:w-auto">Apply</button>
+                    class="btn bg-[#1DD100] text-white px-8 py-3 rounded-lg w-full lg:w-auto">Apply</button>
+
                 </form>
 
                 <div class="grid grid-cols-12 mt-4">
@@ -380,7 +381,7 @@
                   <div class="label">
                     <span class="label-text text-light-black font-semibold font-inter text-lg">Phone Number*</span>
                   </div>
-                  <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full" />
+                  <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full" />
 
                 </label>
 
@@ -391,7 +392,7 @@
                   <input type="text" placeholder="Enter your email id" class="input input-bordered w-full" />
                 </label>
 
-                <button class="btn btn-success w-full bg-[#1DD100] text-xl text-white">Next</button>
+                <button class="btn btn-success w-full bg-[#1DD100] text-xl text-white" disabled>Next</button>
               </form>
             </div>
 

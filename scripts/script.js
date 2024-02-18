@@ -29,6 +29,7 @@ const availableSeatText = document.querySelector(".available-seat");
 
 const seatsContainer = document.querySelector(".dynamic-ticket");
 // console.log(seatsContainer);
+const seatNumText = document.querySelector(".seat-num");
 
 const availableSeats = document.querySelectorAll(".seat");
 availableSeatnum = availableSeats.length;
@@ -78,7 +79,7 @@ availableSeats.forEach((seat, i) => {
       // console.log(totalPrice);
 
       totalContent.textContent = `BDT ${totalPrice}`;
-      console.log(grandTotal);
+      seatNumText.textContent = `${reservedSeats.length}`;
     }
   });
 });
