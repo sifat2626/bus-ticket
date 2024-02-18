@@ -15,6 +15,10 @@
   <title>Bus Ticket</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     .text-light-black {
       color: #030712;
     }
@@ -81,9 +85,9 @@
               <p class="mb-5 font-inter">Yes, you can run unit tests and view the results directly within the app. The
                 integrated
                 testing features allow for a streamlined .</p>
-              <button class="bg-[#1DD100] outline-0 text-light-black font-bold rounded-xl text-xl px-8
-                py-4 lg:mb-12  font-raleway">Buy
-                Tickets</button>
+              <a class="bg-[#1DD100] outline-0 text-light-black font-bold rounded-xl text-xl px-8
+                py-4 lg:mb-12  font-raleway inline-block" href="#paribahan">Buy
+                Tickets</a>
             </div>
           </div>
         </div>
@@ -172,7 +176,7 @@
     </section>
 
     <!-- Paribahan section -->
-    <section class="bg-[#F7F8F8] rounded-t-[64px] border-2 border-t-[#1DD100]">
+    <section id="paribahan" class="bg-[#F7F8F8] rounded-t-[64px] border-2 border-t-[#1DD100]">
       <div class="text-center py-16">
         <h2 class=" text-4xl font-bold font-raleway mb-6">P.H Paribahan</h2>
         <p class="text-light-black opacity-60 max-w-xl mx-auto">Yes, you can run unit tests and view the results
@@ -195,7 +199,7 @@
               </div>
               <div class="px-6 py-4 bg-[#1DD100]/15 flex gap-2 items-center min-w-48">
                 <img src="images/seat-green.png" alt="">
-                <p class="text-[#1DD100] font-inter font-bold">40 Seats left</p>
+                <p class="available-seat text-[#1DD100] font-inter font-bold">40 Seats left</p>
               </div>
             </div>
             <div class="paribahan-bottom bg-[#F7F8F8] rounded-2xl">
@@ -236,8 +240,8 @@
 
         <!-- Seat part -->
         <div class="grid grid-cols-12 bg-white py-8 px-8">
-          <div class="col-span-7 border-r-4 border-dashed ">
-            <div class=" mr-8">
+          <div class="col-span-12 lg:col-span-7 lg:border-r-4 border-dashed ">
+            <div class=" lg:mr-8">
               <div class="border-b-4 border-dashed">
                 <h3 class="text-light-black font-raleway font-bold mb-4">Select Your Seat</h3>
               </div>
@@ -263,52 +267,22 @@
                 </div>
                 <!-- Passenger -->
                 <!-- row A -->
-                <div class="grid grid-cols-12 gap-4 mb-4">
+                <div class="grid grid-cols-12 mb-4">
                   <div class="col-span-6">
                     <div class="grid grid-cols-12 items-center">
                       <div class="col-span-2">
                         <p class="font-inter text-lg text-light-black opacity-50 font-semibold">A</p>
                       </div>
-                      <div class="col-span-10 grid grid-cols-12 gap-4">
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">A1</p>
+                      <div class="col-span-10 grid grid-cols-12 gap-1 lg:gap-4">
+                        <div class="col-span-6  flex justify-center items-center rounded-xl">
+                          <p id="A1"
+                            class="font-inter bg-[#030712]/10 px-4 lg:px-12 rounded-xl text-lg text-light-black opacity-50 font-semibold py-4 seat">
+                            A1</p>
                         </div>
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">A2</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-span-6 grid grid-cols-12">
-                    <div class="col-span-2"></div>
-                    <div class="col-span-10 grid grid-cols-12 gap-4">
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">A3</p>
-                      </div>
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">A4</p>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-
-                <!-- row B -->
-                <div class="grid grid-cols-12 gap-4 mb-4">
-                  <div class="col-span-6">
-                    <div class="grid grid-cols-12 items-center">
-                      <div class="col-span-2">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B</p>
-                      </div>
-                      <div class="col-span-10 grid grid-cols-12 gap-4">
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B1</p>
-                        </div>
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B2</p>
+                        <div class="col-span-6  flex justify-center items-center rounded-xl">
+                          <p id="A2"
+                            class="font-inter bg-[#030712]/10 px-4 lg:px-12 rounded-xl text-lg text-light-black opacity-50 font-semibold py-4 seat">
+                            A2</p>
                         </div>
                       </div>
                     </div>
@@ -316,144 +290,16 @@
 
                   <div class="col-span-6 grid grid-cols-12">
                     <div class="col-span-2"></div>
-                    <div class="col-span-10 grid grid-cols-12 gap-4">
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B3</p>
+                    <div class="col-span-10 grid grid-cols-12 gap-1 lg:gap-4">
+                      <div class="col-span-6  flex justify-center items-center rounded-xl">
+                        <p id="A3"
+                          class="font-inter bg-[#030712]/10 px-4 lg:px-12 rounded-xl text-lg text-light-black opacity-50 font-semibold py-4 seat">
+                          A3</p>
                       </div>
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B4</p>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <!-- row B -->
-                <div class="grid grid-cols-12 gap-4 mb-4">
-                  <div class="col-span-6">
-                    <div class="grid grid-cols-12 items-center">
-                      <div class="col-span-2">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B</p>
-                      </div>
-                      <div class="col-span-10 grid grid-cols-12 gap-4">
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B1</p>
-                        </div>
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B2</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-span-6 grid grid-cols-12">
-                    <div class="col-span-2"></div>
-                    <div class="col-span-10 grid grid-cols-12 gap-4">
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B3</p>
-                      </div>
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B4</p>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <!-- row B -->
-                <div class="grid grid-cols-12 gap-4 mb-4">
-                  <div class="col-span-6">
-                    <div class="grid grid-cols-12 items-center">
-                      <div class="col-span-2">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B</p>
-                      </div>
-                      <div class="col-span-10 grid grid-cols-12 gap-4">
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B1</p>
-                        </div>
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B2</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-span-6 grid grid-cols-12">
-                    <div class="col-span-2"></div>
-                    <div class="col-span-10 grid grid-cols-12 gap-4">
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B3</p>
-                      </div>
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B4</p>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <!-- row B -->
-                <div class="grid grid-cols-12 gap-4 mb-4">
-                  <div class="col-span-6">
-                    <div class="grid grid-cols-12 items-center">
-                      <div class="col-span-2">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B</p>
-                      </div>
-                      <div class="col-span-10 grid grid-cols-12 gap-4">
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B1</p>
-                        </div>
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B2</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-span-6 grid grid-cols-12">
-                    <div class="col-span-2"></div>
-                    <div class="col-span-10 grid grid-cols-12 gap-4">
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B3</p>
-                      </div>
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B4</p>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <!-- row B -->
-                <div class="grid grid-cols-12 gap-4 mb-4">
-                  <div class="col-span-6">
-                    <div class="grid grid-cols-12 items-center">
-                      <div class="col-span-2">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B</p>
-                      </div>
-                      <div class="col-span-10 grid grid-cols-12 gap-4">
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B1</p>
-                        </div>
-                        <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                          <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B2</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-span-6 grid grid-cols-12">
-                    <div class="col-span-2"></div>
-                    <div class="col-span-10 grid grid-cols-12 gap-4">
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B3</p>
-                      </div>
-                      <div class="col-span-6 bg-[#030712]/10 py-4 px-2 flex justify-center items-center rounded-xl">
-                        <p class="font-inter text-lg text-light-black opacity-50 font-semibold">B4</p>
+                      <div class="col-span-6  flex justify-center items-center rounded-xl">
+                        <p id="A4"
+                          class="font-inter bg-[#030712]/10 px-4 lg:px-12 rounded-xl text-lg text-light-black opacity-50 font-semibold py-4 seat">
+                          A4</p>
                       </div>
                     </div>
 
@@ -465,7 +311,7 @@
             </div>
           </div>
 
-          <div class="col-span-5 ml-8">
+          <div class="col-span-12 lg:col-span-5 lg:ml-8">
             <div class="border-b-4 border-dashed">
               <h3 class="text-light-black font-raleway font-bold mb-4">Select Your Seat</h3>
             </div>
@@ -488,28 +334,7 @@
                 </div>
 
                 <div class="dynamic-ticket border-b-4 pb-4">
-                  <div class="grid grid-cols-12 mt-2">
-                    <div class="col-span-4">
-                      <p class="font-inter text-light-black opacity-60">C2</p>
-                    </div>
-                    <div class="col-span-4">
-                      <p class="font-inter text-light-black opacity-60">Economy</p>
-                    </div>
-                    <div class="col-span-4 ml-auto">
-                      <p class="font-inter text-light-black opacity-60">550</p>
-                    </div>
-                  </div>
-                  <div class="grid grid-cols-12 mt-2">
-                    <div class="col-span-4">
-                      <p class="font-inter text-light-black opacity-60">C2</p>
-                    </div>
-                    <div class="col-span-4">
-                      <p class="font-inter text-light-black opacity-60">Economy</p>
-                    </div>
-                    <div class="col-span-4 ml-auto">
-                      <p class="font-inter text-light-black opacity-60">550</p>
-                    </div>
-                  </div>
+
                 </div>
 
                 <div class="grid grid-cols-12 mt-4">
@@ -521,11 +346,11 @@
                   </div>
                 </div>
 
-                <form action="" class="mt-6">
-                  <label class="input input-bordered min-h-16 flex items-center gap-2">
-                    <input type="text" class="grow" placeholder="Have any coupon?" />
-                    <button class="bg-[#1DD100] text-white px-8 py-3 rounded-lg">Apply</button>
+                <form action="" class="flex flex-col lg:flex-row items-center gap-2 justify-between mt-6">
+                  <label class="input w-full flex">
+                    <input type="text" class="grow " placeholder="Have any coupon?" />
                   </label>
+                  <button class="bg-[#1DD100] text-white px-8 py-3 rounded-lg w-full lg:w-auto">Apply</button>
                 </form>
 
                 <div class="grid grid-cols-12 mt-4">
@@ -571,10 +396,10 @@
 
             <!-- conditions part -->
             <div class="grid grid-cols-12 text-center mt-6">
-              <div class="col-span-6">
+              <div class="col-span-12 lg:col-span-6 mb-2">
                 <p class="underline font-inter text-light-black opacity-60">Terms and Conditions</p>
               </div>
-              <div class="col-span-6">
+              <div class="col-span-12 lg:col-span-6">
                 <p class="underline font-inter text-light-black opacity-60">Cancellation Policy</p>
               </div>
 
@@ -588,6 +413,8 @@
     </section>
   </main>
   <footer></footer>
+
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
