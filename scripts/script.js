@@ -1,13 +1,54 @@
 let availableSeatnum;
+let discount;
+let grandTotal;
 let reservedSeats = [];
+const ticketPrice = 550;
+let totalPrice;
+const coupons = [
+  {
+    code: "NEW15",
+    discount: 15,
+  },
+  {
+    code: "Couple 20",
+    discount: 20,
+  },
+];
+
+const couponInput = document.getElementById("coupon-input");
+let couponValue;
+const couponButton = document.getElementById("coupon-button");
+
+// console.log(coupons[0]);
+
+const totalContent = document.querySelector(".total");
+const grandTotalContent = document.querySelector(".grand-total");
+// console.log(totalContents);
 
 const availableSeatText = document.querySelector(".available-seat");
 
 const seatsContainer = document.querySelector(".dynamic-ticket");
-console.log(seatsContainer);
+// console.log(seatsContainer);
 
 const availableSeats = document.querySelectorAll(".seat");
 availableSeatnum = availableSeats.length;
+
+//getting coupon code
+couponButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  couponValue = couponInput.value;
+  //checking coupon value
+  coupons.forEach((coupon) => {
+    if (coupon.code.toLowerCase() === couponValue.toLowerCase()) {
+      console.log(couponValue);
+      // calculating grand total
+      console.log(totalPrice);
+      discount = coupon.discount;
+      grandTotal = totalPrice - (totalPrice * discount) / 100;
+      grandTotalContent.textContent = `BDT ${grandTotal}`;
+    }
+  });
+});
 
 availableSeats.forEach((seat, i) => {
   seat.addEventListener("click", function () {
@@ -31,6 +72,13 @@ availableSeats.forEach((seat, i) => {
           </div>
         </div>
       `;
+
+      // handling total price
+      totalPrice = reservedSeats.length * ticketPrice;
+      // console.log(totalPrice);
+
+      totalContent.textContent = `BDT ${totalPrice}`;
+      console.log(grandTotal);
     }
   });
 });
