@@ -157,6 +157,7 @@ function openModal() {
   modal.showModal(); // Show the modal
   // Customize modal styles here
   modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; // Example customization
+  event.preventDefault();
 }
 
 function closeModal() {
