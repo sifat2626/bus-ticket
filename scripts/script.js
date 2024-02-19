@@ -36,7 +36,7 @@ const couponButton = document.getElementById("coupon-button");
 // console.log(coupons[0]);
 
 const hiddenTicketSection = document.getElementById("hidden-ticket-section");
-const hiddenTotalSection = document.getElementById("hidden-total-section");
+// const hiddenTotalSection = document.getElementById("hidden-total-section");
 const hiddenCouponSection = document.getElementById("hidden-coupon-section");
 const hiddenGrandTotal = document.getElementById("hidden-grand-total");
 
@@ -82,7 +82,7 @@ couponButton.addEventListener("click", function (e) {
 availableSeats.forEach((seat, i) => {
   seat.addEventListener("click", function () {
     hiddenTicketSection.classList.remove("hidden");
-    hiddenTotalSection.classList.remove("hidden");
+    // hiddenTotalSection.classList.remove("hidden");
     if (reservedSeats.length < 4 && !reservedSeats.includes(seat.id)) {
       reservedSeats.push(seat.id);
 
